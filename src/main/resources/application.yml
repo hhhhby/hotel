@@ -1,0 +1,27 @@
+server:
+  port: 8081
+spring:
+  redis:
+    port: 6379
+    password: 123456
+    url: 127.0.0.1
+    lettuce:
+      pool:
+        max-active: 10
+        min-idle: 1
+        max-idle: 10
+        time-between-eviction-runs: 10s
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/hotel?userSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+  jackson:
+    default-property-inclusion: non_null
+
+mybatis-plus:
+  type-aliases-package: com.hby.entity
+
+logging:
+  level:
+    com.hby: debug
